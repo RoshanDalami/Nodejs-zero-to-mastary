@@ -1,0 +1,23 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix Server",
+    "install-client": "npm install --prefix Client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix Server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix Client && npm start --prefix Server",
+    "deploy-cluster": "npm run build --prefix Client && npm run cluster --prefix Server",
+    "test": "npm run test --prefix Server && npm run test --prefix Client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
